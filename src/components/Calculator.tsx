@@ -62,8 +62,25 @@ export function Calculator() {
     }
   };
 
+  const formatDisplay = (val: string) => {
+    if (val === 'Error') return val;
+    if (!val) return '0';
+    
+    const parts = val.split('.');
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return parts.join('.');
+  };
+
   return (
     <>
+      {/* Backdrop */}
+      {isOpen && (
+        <div 
+          className="fixed inset-0 bg-black/20 z-40 backdrop-blur-sm"
+          onClick={() => setIsOpen(false)}
+        />
+      )}
+
       {/* Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
@@ -97,7 +114,7 @@ export function Calculator() {
         {/* Display */}
         <div className="p-6 bg-black flex-1 flex flex-col justify-end items-end gap-2 font-mono">
           <div className="text-zinc-500 text-sm h-6">{expression}</div>
-          <div className="text-white text-4xl font-bold break-all">{display}</div>
+          <div className="text-white text-4xl font-bold break-all">{formatDisplay(display)}</div>
         </div>
 
         {/* Keypad */}

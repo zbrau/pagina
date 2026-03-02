@@ -4,6 +4,14 @@ type Translations = Record<Language, Record<string, string>>;
 
 export const translations: Translations = {
   es: {
+    // Subject Selection
+    'subject.select': 'Selecciona una Materia',
+    'subject.math': 'Matemáticas IV',
+    'subject.math.desc': 'Geometría Analítica, Plano Cartesiano, Lugares Geométricos y más.',
+    'subject.geo': 'Geopolítica',
+    'subject.geo.desc': 'Casos prácticos fiscales: cálculo de IVA, ISR e IEPS.',
+    'back.subjects': 'Volver a Materias',
+
     // General
     'app.title': 'Matemáticas IV: Geometría Analítica',
     'app.description': 'Guía de estudio interactiva diseñada para ayudarte a dominar los fundamentos de la geometría analítica a través de teoría y práctica.',
@@ -90,6 +98,14 @@ export const translations: Translations = {
     'guide.midpoint.a': 'Usa la Fórmula de Punto Medio.',
   },
   en: {
+    // Subject Selection
+    'subject.select': 'Select a Subject',
+    'subject.math': 'Math IV',
+    'subject.math.desc': 'Analytical Geometry, Cartesian Plane, Geometric Loci and more.',
+    'subject.geo': 'Geopolitics',
+    'subject.geo.desc': 'Practical fiscal cases: VAT, Income Tax, and Excise Tax calculations.',
+    'back.subjects': 'Back to Subjects',
+
     // General
     'app.title': 'Math IV: Analytical Geometry',
     'app.description': 'Interactive study guide designed to help you master the fundamentals of analytical geometry through theory and practice.',
